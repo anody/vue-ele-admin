@@ -12,6 +12,7 @@
  - [vuex](https://vuex.vuejs.org/zh-cn/)
  - [vue-router](https://router.vuejs.org/zh-cn/)
  - [element-ui](http://element.eleme.io/#/zh-CN)
+ - [axios](https://www.jianshu.com/p/7a9fbcbb1114)
  - [less](http://lesscss.cn/)
  
  

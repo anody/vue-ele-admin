@@ -14,7 +14,19 @@ function hasPermission (roles, permissionRoles) {
   return roles.some(role => permissionRoles.indexOf(role) >= 0)
 }
 
-const whiteList = ['/login', '/authredirect']// no redirect whitelist
+const whiteList = [
+  '/login',
+  '/create',
+  '/user',
+  '/icon',
+  '/charts/keyboard',
+  '/charts/line',
+  '/charts/mixchart',
+  '/example/mixin',
+  '/example/tab',
+  '/example/back-to-top',
+  '/example/drag-dialog'
+]// no redirect whitelist
 
 router.beforeEach((to, from, next) => {
   NProgress.start() // start progress bar
@@ -41,7 +53,7 @@ router.beforeEach((to, from, next) => {
         if (hasPermission(store.getters.roles, to.meta.roles)) {
           next()//
         } else {
-          next({ path: '/401', replace: true, query: { noGoBack: true }})
+          next({path: '/401', replace: true, query: { noGoBack: true }})
         }
         // 可删 ↑
       }

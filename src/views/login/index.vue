@@ -22,16 +22,11 @@
         </span>
       </el-form-item>
 
-      <el-button type="primary" style="width:100%;margin-bottom:30px;" :loading="loading" @click.native.prevent="handleLogin">登录</el-button>
+      <el-button type="primary" style="width:100%;margin-bottom:30px;" :loading="loading" @click.native.prevent="handleLogin">提交</el-button>
 
-      <!--<div class="tips">-->
-        <!--<span style="margin-right:18px;">{{$t('login.username')}} : editor</span>-->
-        <!--<span>{{$t('login.password')}} : {{$t('login.any')}}</span>-->
-      <!--</div>-->
     </el-form>
 
     <el-dialog title="123" :visible.sync="showDialog" append-to-body>
-      <!--{{$t('login.thirdpartyTips')}}-->
       <br/>
       <br/>
       <br/>
@@ -64,7 +59,7 @@ export default {
     return {
       loginForm: {
         username: 'admin',
-        password: '1111111'
+        password: '123456'
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],
@@ -98,31 +93,7 @@ export default {
           return false
         }
       })
-    },
-    afterQRScan () {
-      // const hash = window.location.hash.slice(1)
-      // const hashObj = getQueryObject(hash)
-      // const originUrl = window.location.origin
-      // history.replaceState({}, '', originUrl)
-      // const codeMap = {
-      //   wechat: 'code',
-      //   tencent: 'code'
-      // }
-      // const codeName = hashObj[codeMap[this.auth_type]]
-      // if (!codeName) {
-      //   alert('第三方登录失败')
-      // } else {
-      //   this.$store.dispatch('LoginByThirdparty', codeName).then(() => {
-      //     this.$router.push({ path: '/' })
-      //   })
-      // }
     }
-  },
-  created () {
-    // window.addEventListener('hashchange', this.afterQRScan)
-  },
-  destroyed () {
-    // window.removeEventListener('hashchange', this.afterQRScan)
   }
 }
 </script>
@@ -130,6 +101,13 @@ export default {
 <style lang="less">
 @bg: #2d3a4b;
 @light_gray: #eee;
+.borderRadio(@value: 10px) {
+  -webkit-border-radius: @value;
+  -moz-border-radius: @value;
+  -ms-border-radius: @value;
+  -o-border-radius: @value;
+  border-radius: @value;
+}
 
 .login-container {
   .el-input {
@@ -172,8 +150,10 @@ export default {
     left: 0;
     right: 0;
     width: 520px;
-    padding: 35px 35px 15px 35px;
+    padding: 35px;
     margin: 120px auto;
+    background-color: #3d5e8a;
+    .borderRadio(8px);
   }
   .tips {
     font-size: 14px;
@@ -186,7 +166,7 @@ export default {
     }
   }
   .svg-container {
-    padding: 6px 5px 6px 15px;
+    padding: 6px 5px 6px 9px;
     color: @dark_gray;
     vertical-align: middle;
     width: 30px;
@@ -200,10 +180,13 @@ export default {
     .title {
       font-size: 26px;
       font-weight: 400;
-      color: @light_gray;
+      color: #000;
       margin: 0px auto 40px auto;
       text-align: center;
       font-weight: bold;
+      color: #fff;
+      text-indent: 20px;
+      letter-spacing: 10px;
     }
     .set-language {
       color: #fff;

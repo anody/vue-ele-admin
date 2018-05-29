@@ -10,7 +10,7 @@
         </el-select>
       </el-form-item>
       <el-form-item label="健康情况：" label-width="100px" prop="health">
-        <el-switch v-model="userForm.health" active-text="健康" inactive-text="不健康" />
+        <el-switch v-model="userForm.health" class="healItem" active-text="健康" inactive-text="不健康" />
       </el-form-item>
       <el-form-item label="生日：" label-width="100px" prop="birth">
         <el-date-picker v-model="userForm.birth" type="datetime" format="yyyy-MM-dd HH:mm:ss" placeholder="选择日期时间" class="formItem" />
@@ -170,6 +170,9 @@ export default {
     }
     .formItem{
       width:100%;
+    }
+    .healItem{
+      margin-top: 10px;
     }
   }
 </style>

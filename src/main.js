@@ -9,6 +9,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 import i18n from './lang' // Internationalization
 import './icons'
+import './permission' // permission control
 
 import '../static/ueditor/ueditor.config.js'
 import '../static/ueditor/ueditor.all.min.js'

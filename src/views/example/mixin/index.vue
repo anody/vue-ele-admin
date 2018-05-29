@@ -23,8 +23,8 @@
             <span>图片hover效果</span>
           </div>
           <div class="component-item">
-            <pan-thumb width="100px" height="100px" image="https://wpimg.wallstcn.com/577965b9-bb9e-4e02-9f0c-095b41417191">
-              vue-element-admin
+            <pan-thumb width="100px" height="100px" image="http://dach328.com/zb_users/upload/2018/05/201805281527494357639226.png">
+              vue-ele-admin
             </pan-thumb>
           </div>
         </el-card>

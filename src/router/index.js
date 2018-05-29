@@ -7,7 +7,6 @@ Vue.prototype.$http = axios
 Vue.use(Router)
 
 export const constantRouterMap = [
-  { path: '/login', component: resolve => require(['@/views/login'], resolve), hidden: true },
   {
     path: '',
     component: Layout,
@@ -32,6 +31,7 @@ export const constantRouterMap = [
     }],
     hidden: true
   },
+  { path: '/login', component: resolve => require(['@/views/login'], resolve), hidden: true },
   {
     path: '',
     component: Layout,
@@ -52,6 +52,16 @@ export const constantRouterMap = [
       component: resolve => require(['@/views/user'], resolve),
       name: 'user',
       meta: { title: '用户列表', icon: 'user', noCache: true }
+    }]
+  },
+  {
+    path: '',
+    component: Layout,
+    children: [{
+      path: 'icon',
+      component: resolve => require(['@/views/svg-icons'], resolve),
+      name: 'icons',
+      meta: { title: '图标', icon: 'icon', noCache: true }
     }]
   },
   {

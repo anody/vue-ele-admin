@@ -24,7 +24,7 @@ npm install --registry=https://registry.npm.taobao.org
 # 安装依赖
 cnpm install
 # 启动服务
-npm run dev
+npm start
 ```
  浏览器访问 http://localhost:8080
 
@@ -72,4 +72,8 @@ npm run build:prod
 ```
 
 
+[在线demo](http://vue2.dach328.com/)
+
 更多信息请参考博客 [使用文档](http://dach328.com/?cate=10)
+
+Copyright (c) 2018-present Ladyson

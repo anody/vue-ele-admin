@@ -1,5 +1,5 @@
 ### 简介
-`vue-ele-admin` 是一个后台集成解决方案，它基于vue2和Element-ui。它使用了最新的前端技术栈，内置了动态路由，权限验证等很多功能特性，相信不管你的需求是什么，本项目都能帮助到大家。
+`vue-ele-admin` 是一个前后台集成解决方案，它基于vue2和Element-ui。它使用了最新的前端技术栈，内置了动态路由，权限验证等很多功能特性，相信不管你的需求是什么，本项目都能帮助到大家。
 
 
 ### 前序准备
@@ -31,8 +31,17 @@ npm start
 
 
 ### 兼容性
-该项目不支持低版本浏览器(如ie)，有需求请自行添加polyfill [详情](https://github.com/PanJiaChen/vue-element-admin/wiki#babel-polyfill)
-
+该项目不支持低版本浏览器(如ie)，有需求请自行添加polyfill
+# 下载依赖
+npm install --save babel-polyfill
+# 在入口文件中引入
+import 'babel-polyfill';
+// 或者
+require('babel-polyfill');//es6
+在webpack.config.js中加入babel-polyfill到你的入口数组：
+module.exports = {
+    entry:["babel-polyfill","./app/js"]
+}
 
 ### 发布
 ```bash

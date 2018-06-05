@@ -25,7 +25,8 @@ const whiteList = [
   '/example/mixin',
   '/example/tab',
   '/example/back-to-top',
-  '/example/drag-dialog'
+  '/example/drag-dialog',
+  '/401'
 ]// no redirect whitelist
 
 router.beforeEach((to, from, next) => {
